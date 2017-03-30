@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lock</title>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(135deg, blue, lightblue);
+		}
+		canvas{
+			display: block;
+			margin:  0 auto;
+		}
+		p{
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+			color: #fff;
+			font-size: 18px;
+		}
+		#reset{
+			text-align: right;
+			padding: 0 6%;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		.hide{
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<p id="reset" class="hide">重置密码</p>
+	<p id="hint"></p>
+	<canvas id="canvas"></canvas>
+
+	<script src="util.js"></script>
+	<script src="task.js"></script>
+</body>
+</html>
