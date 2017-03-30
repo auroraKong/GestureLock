@@ -22,7 +22,7 @@
 			text-align: center;
 			height: 40px;
 			line-height: 40px;
-			color: #fff;
+			color: azure;
 			font-size: 18px;
 		}
 		#reset{
@@ -34,6 +34,40 @@
 		.hide{
 			opacity: 0;
 		}
+		.shake{
+			animation: shake .6s;
+			-webkit-animation: shake .6s;
+			animation-fill-mode: both;
+			-webkit-animation-fill-mode: both;
+		}
+		@-webkit-keyframes shake{
+			0%, 100% {
+				transform: translate(0, 0);
+				-webkit-transform: translate(0, 0);
+			}
+			10%,30%,50%,70%,90%{
+				transform: translate(-10px, 0);
+				-webkit-transform: translate(-10px, 0);
+			}
+			20%,40%,60%,80%{
+				transform: translate(10px, 0);
+				-webkit-transform: translate(10px, 0);
+			}
+		}
+		@keyframes shake{
+			0%, 100% {
+				transform: translate(0, 0);
+				-webkit-transform: translate(0, 0);
+			}
+			10%,30%,50%,70%,90%{
+				transform: translate(-10px, 0);
+				-webkit-transform: translate(-10px, 0);
+			}
+			20%,40%,60%,80%{
+				transform: translate(10px, 0);
+				-webkit-transform: translate(10px, 0);
+			}
+		}
 	</style>
 </head>
 <body>
@@ -42,6 +76,10 @@
 	<canvas id="canvas"></canvas>
 
 	<script src="util.js"></script>
+	<script src="store.js"></script>
 	<script src="task.js"></script>
+	<script>
+		new Lock();
+	</script>
 </body>
 </html>
